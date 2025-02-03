@@ -22,4 +22,5 @@ config.ts
 *.ntvs*
 *.njsproj
 *.sln
+.env
 *.sw?

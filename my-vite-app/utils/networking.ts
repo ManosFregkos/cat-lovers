@@ -1,5 +1,5 @@
 import axios, {AxiosError, AxiosRequestConfig, CancelTokenSource} from "axios";
-import {API_KEY, API_URL} from "../config.ts";
+import {API_URL} from "../config.ts";
 
 export interface SpringBootError {
   type: string;
@@ -38,7 +38,7 @@ const clearCancelToken = (requestKey: string) => {
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
-  headers: { 'x-api-key' : API_KEY }
+  headers: { 'x-api-key' : import.meta.env.VITE_KEY }
 });
 
 
